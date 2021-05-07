@@ -45,3 +45,8 @@
 * Password is sent after SSH Connection is made(Both my computer and the server has the Symmetric key), it's Encrypted and safe to send
 * But by bots which Bruteforce different passwords, we can Hack this
 * So ssh is safer
+
+* If there are multiple private keys in .ssh folder
+```sh
+ssh-add ~/.ssh/id_rsa_digitalocean
+```
