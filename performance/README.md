@@ -44,3 +44,7 @@
   * Add transparency
 * SVG: Vector Graphics and incredibly small and can be styled with CSS
   * Can expand or compress without hampering the quality
+* Resources:
+  * https://99designs.com/blog/tips/image-file-types/
+  * https://pageweight.imgix.com/
+  * https://www.sitepoint.com/gif-png-jpg-which-one-to-use/
