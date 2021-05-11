@@ -22,3 +22,13 @@
   * Load Balancing
   * DB Scaling
   * Gzip
+
+### Network Performance
+
+* Minimize files: Honey I shrunk the files
+  * The client has to download the files from the server to view a Webpage
+  * The smaller the content, the better it is
+  * To do this:
+    * Minimize Text: Using Uglify js or webpack
+    * Minimize Images
+* Minimize delivery: The Traveling deliveryman
