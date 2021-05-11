@@ -32,3 +32,15 @@
     * Minimize Text: Using Uglify js or webpack
     * Minimize Images
 * Minimize delivery: The Traveling deliveryman
+
+### Image File Formats
+
+* JPG: Complex images with lots of colors
+  * Can't change the transparency
+  * File Size: Big
+* GIF: Color limited and is mainly used in Small Animations
+* PNG: Limit the color and smaller in size compared to JPG
+  * Logo
+  * Add transparency
+* SVG: Vector Graphics and incredibly small and can be styled with CSS
+  * Can expand or compress without hampering the quality
