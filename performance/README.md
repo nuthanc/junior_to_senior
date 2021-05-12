@@ -48,3 +48,10 @@
   * https://99designs.com/blog/tips/image-file-types/
   * https://pageweight.imgix.com/
   * https://www.sitepoint.com/gif-png-jpg-which-one-to-use/
+
+### Image Optimzations
+
+![minimize](../img/min.png)
+* Minimizing tools
+  * jpeg-optimizer
+  * tiny png
