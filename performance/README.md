@@ -55,3 +55,18 @@
 * Minimizing tools
   * jpeg-optimizer
   * tiny png
+
+### Image Optimzations 2
+
+* Last 3 points in the above image
+* Media queries for different screen sizes
+* With Media queries, browser is smart enough not to download the image or resource if it's not needed for that particular Media queries screen size
+* Use CDNs like imigx where they optimize and cache the images which you upload and gives an URL
+* Images have metadata associated with them like where, when and from which device the image was taken
+  * https://www.verexif.com/en/
+  * You can remove with the above link
+* Resources:
+  * https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+  * https://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints/
+  * https://gist.github.com/bartholomej/8415655
+  * https://www.verexif.com/en/
