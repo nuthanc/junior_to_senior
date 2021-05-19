@@ -70,3 +70,17 @@
   * https://responsivedesign.is/articles/why-you-dont-need-device-specific-breakpoints/
   * https://gist.github.com/bartholomej/8415655
   * https://www.verexif.com/en/
+
+### Delivery Optimizations
+
+* Reducing download frequency(The Traveling Deliveryman)
+* Reducing the number of Components the page requires proportionately decreases the number of HTTP requests it has to make
+* Less trips
+* Flexbox or CSS grids instead of Bootstrap
+* Native JS methods like querySelector or querySelectorAll instead of Jquery
+* So, you are thinking why not send all files at once instead of making multiple HTTP requests
+  * HTTP standard has a maximum file size limit to download
+  * Limit on max concurrent requests that a Browser can make
+* **So to make our websites faster**
+  * Minimize the files like css, js and images
+  * Limit the number of files to deliver
