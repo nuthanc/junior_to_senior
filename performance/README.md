@@ -87,3 +87,16 @@
 * Max parallel http connections in a browser: https://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser
 
 ### Check media-queries and media-queries-exercise for Network Optimization
+
+### Critical Render Path Introduction
+
+* Client makes request-> Server 
+* HTML
+* As and when CSS, images and JS are encountered, they are downloaded
+* DOM creation occurs when HTML is downloaded and is parsed by the Browser
+* When CSS is downloaded, CSSOM(CSS Object Model) construction occurs
+  * Styling information: How the content is styled
+* When JS is downloaded, it makes the changes to DOM and CSSOM
+* Render tree: Combination of DOM and CSSOM
+* Browser uses Render tree to figure out the layout and paints the final Webpage
+![crp](../img/crp.png)
