@@ -85,3 +85,5 @@
   * Minimize the files like css, js and images
   * Limit the number of files to deliver
 * Max parallel http connections in a browser: https://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser
+
+### Check media-queries and media-queries-exercise for Network Optimization
