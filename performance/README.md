@@ -98,5 +98,92 @@
   * Styling information: How the content is styled
 * When JS is downloaded, it makes the changes to DOM and CSSOM
 * Render tree: Combination of DOM and CSSOM
+  * The render tree captures both the content and the styles
 * Browser uses Render tree to figure out the layout and paints the final Webpage
 ![crp](../img/crp.png)
+* Resource: https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path
+
+### Critical Render Path
+
+![crp1](../img/crp1.png)
+* The **Critical Rendering Path** is the sequence of steps the browser goes through to convert the HTML, CSS, and JavaScript into pixels on the screen
+* When the HTML is downloaded, the browser parses that file
+* It starts to create the DOM while simultaneously downloading other external resources when it encounters them
+* Download of CSS and JS is given high priority than other resources like images
+* Checkout **critical-render-path folder**
+
+#### How to Optimize step 1 in the image
+* To load **styles(CSS) as soon as possible(in \<head>)** and **scripts(JS) as late as possible(before \</body>)**
+* This is because JS requires HTML and CSS parsing to finish before it can be run in Step 4
+* So JS in the head tag is a big no-no
+* JS blocks CSS download if it is present in the head tag before CSS links
+
+#### CSS is render blocking, so to optimize it
+* Only load whatever is needed
+  * Keep the style less bloated
+  * Instead of stylesheets for above the fold css, inside head tag add style block
+  * Inline css
+  * The above 2 will make rendering faster, because no new stylesheets are required thereby no downloads
+* Above the fold loading
+  * Like style2.css which we don't need for the main page for our site
+  * To do this above the fold loading, we used window.onload to load the stylesheet(style2.css)
+* Media attributes
+  * Checkout index.html in head tag
+* Less Specificity
+  * Check good and bad in style3.css
+  * Extra work by Browser if the specifity is complicated
+
+#### JS, the parser blocker
+* DOM construction is paused when it encounters a script tag, thereby need for download
+* Also JS doesn't execute until CSSOM is constructed
+* Only then JS executes
+* But it can alter the DOM and CSSOM
+* Only after this execution, can Render Tree be constructed
+* **To Optimize**
+  * Load Scripts Asynchronously
+![crp](../img/load_js.png)
+    * Download js with another thread while html is being parsed
+    * But there are drawbacks 
+      * When JS executes **after the page is loaded**: It affects the User experience if we are relying on JS for User experience
+      * When JS executes **before the page is loaded**: Errors when it does DOM manipulation without the DOM actually being present
+    * So this must done only for scripts which has nothing to do with our DOM and CSSOM(like Google analytics scripts, Tracking scripts), i.e. external scripts that require no knowledge of our code
+  * Defer Loading of scripts
+    * Similar to async wrt loading of our page(i.e simultaneous download of JS while html is being parsed)
+    * But JS executes after our Page loads
+    * Really good for scripts that act on the DOM, but also not important for loading of above the fold content
+    ```txt
+    When to use just scripts: Our App scripts
+    When to use async: 3rd party Scripts that don't affect the DOM
+    When to use defer: 3rd party Scripts which are not that important and are not above the fold
+    ```
+  * Minimize DOM manipulation
+    * Checkout index.html of critical render path folder(mainly about script1)
+    ```txt
+    // Console output
+    This is script 1
+    DOM fully loaded and parsed
+    window done!
+    All resources finished loading
+    ```
+    * Reading the JS file, building the DOM tree, finally finished building it and finally finished loading the scripts
+     ```txt
+    // Console output
+    This is script 1
+    This is script 3
+    DOM fully loaded and parsed
+    This is script 2
+    window done!
+    All resources finished loading
+    ```
+  * Avoid long running Javascript
+    * Page completely blocked due to JS code
+    * See in index.html 
+* Reference for async and defer: https://stackoverflow.com/questions/10808109/script-tag-async-defer
+
+#### Step 8 in Critical Render Path Diagram
+
+* Render tree is constructed after Step 4
+* Layout: Positioning of the elements
+* Finally painting the page
+* After JS manipulates the DOM(mainly through Event Listeners), Render tree is constructed again, then the Layout and finally the Painting of the pixels
+* Modern Browsers are smart enough to do a Partial redraw of the Page when JS manipulates in Step 8

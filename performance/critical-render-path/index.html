@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Critical render path</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Example for media attributes -->
+    <link
+      rel="stylesheet"
+      href="./style3.css"
+      media="only screen and (min-width:600px)"
+    />
+  </head>
+  <body>
+    <h1>How Fast?</h1>
+    <button>Click Me</button>
+
+    <!-- Above the fold loading -->
+    <h2 class="important">Important above the fold content</h2>
+    <h2 class="secondary">
+      This is below the fold content. You won't see this until after page loads
+    </h2>
+    <script>
+      const loadStyleSheet = (src) => {
+        if (document.createStyleSheet) {
+          document.createStyleSheet(src);
+        } else {
+          const stylesheet = document.createElement('link');
+          stylesheet.href = src;
+          stylesheet.type = 'text/css';
+          stylesheet.rel = 'stylesheet';
+          document.querySelector('head').appendChild(stylesheet);
+        }
+      };
+
+      window.onload = function () {
+        console.log('window done!');
+        loadStyleSheet('./style2.css');
+      };
+    </script>
+    <!-- <script>alert('check')</script> -->
+    <!-- Minimize DOM manipulation -->
+    <script src="./script.js"></script>
+    <script src="./script2.js" async></script>
+    <script src="./script3.js"></script>
+    <!-- Avoid long running JS topic -->
+    <script>
+      const button = document.querySelector('button');
+      button.addEventListener('click', function () {
+        alert('Stop Clicking me');
+      });
+    </script>
+  </body>
+</html>
