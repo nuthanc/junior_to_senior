@@ -187,3 +187,11 @@
 * Finally painting the page
 * After JS manipulates the DOM(mainly through Event Listeners), Render tree is constructed again, then the Layout and finally the Painting of the pixels
 * Modern Browsers are smart enough to do a Partial redraw of the Page when JS manipulates in Step 8
+
+### Exercise Keiko Corp Website
+
+* Repo: https://github.com/aneagoie/keiko-corp
+* Performance testing on https://aneagoie.github.io/keiko-corp/
+  * Pagespeed insights
+  * Webpagetest
+* Exercise will be done on the Fork of the above repo(https://github.com/nuthanc/keiko-corp)
