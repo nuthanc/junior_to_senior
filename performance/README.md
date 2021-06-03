@@ -202,3 +202,4 @@
 ### Resources
 
 * Checkout performance_tools.html
+* https://css-tricks.com/prefetching-preloading-prebrowsing/
