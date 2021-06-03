@@ -198,3 +198,7 @@
   * Pagespeed insights
   * Webpagetest
 * Exercise will be done on the Fork of the above repo(https://github.com/nuthanc/keiko-corp)
+
+### Resources
+
+* Checkout performance_tools.html
