@@ -203,3 +203,21 @@
 
 * Checkout performance_tools.html
 * https://css-tricks.com/prefetching-preloading-prebrowsing/
+
+### HTTP/2
+
+* Improves Network Latency
+* HTTP/2 does not modify the application semantics of HTTP in any way. All the core concepts, such as HTTP methods, status codes, URIs, and header fields, remain in place. Instead, HTTP/2 **modifies how the data is formatted (framed) and transported between the client and server**, both of which manage the entire process, and hides all the complexity from our applications within the new framing layer. As a result, all existing applications can be delivered without modification.
+* HTTP/2 solves the original problem — inefficient use of a single TCP connection — **since multiple requests/responses can now be transmitted over the same connection at the same time**
+* require http2 in node
+* Drawback: **head-of-line blocking**
+  * all requests and responses are equally affected by packet loss (e.g. due to network congestion), even if the data that is lost only concerns a single request. This is because while the HTTP/2 layer can segregate different HTTP exchanges on separate streams, TCP has no knowledge of this abstraction, and all it sees is a stream of bytes with no particular meaning.
+  * The role of TCP is to deliver the entire stream of bytes, in the correct order, from one endpoint to the other. When a TCP packet carrying some of those bytes is lost on the network path, it creates a gap in the stream and TCP needs to fill it by resending the affected packet when the loss is detected. While doing so, none of the successfully delivered bytes that follow the lost ones can be delivered to the application, even if they were not themselves lost and belong to a completely independent HTTP request. So they end up getting unnecessarily delayed as TCP cannot know whether the application would be able to process them without the missing bits. This problem is known as “head-of-line blocking”.
+* https://developers.google.com/web/fundamentals/performance/http2/
+
+### HTTP/3
+
+* This is where HTTP/3 comes into play: instead of using TCP as the transport layer for the session, it uses QUIC, a new Internet transport protocol, which, among other things, introduces streams as first-class citizens at the transport layer. QUIC streams share the same QUIC connection, so no additional handshakes and slow starts are required to create new ones, but QUIC streams are delivered independently such that in most cases packet loss affecting one stream doesn't affect others. This is possible because QUIC packets are encapsulated on top of UDP datagrams.
+* Using UDP allows much more flexibility compared to TCP, and enables QUIC implementations to live fully in user-space — updates to the protocol’s implementations are not tied to operating systems updates as is the case with TCP. With QUIC, HTTP-level streams can be simply mapped on top of QUIC streams to get all the benefits of HTTP/2 without the head-of-line blocking.
+* As of May 2021, the HTTP/3 protocol is still officially an Internet Draft but is already supported by Google Chrome since April 2020 (including Chrome for Android, and Microsoft Edge, which is based on it).
+* https://blog.cloudflare.com/http3-the-past-present-and-future/
