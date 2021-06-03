@@ -179,6 +179,9 @@
     * Page completely blocked due to JS code
     * See in index.html 
 * Reference for async and defer: https://stackoverflow.com/questions/10808109/script-tag-async-defer
+* Summary in below image
+![crp](../img/opt.png)
+
 
 #### Step 8 in Critical Render Path Diagram
 

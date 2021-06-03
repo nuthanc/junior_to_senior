@@ -1,7 +1,7 @@
 # keiko-corp
 
 * The greatest company ever created by Bruno
-* Link: https://nuthanc.github.io/keiko-corp/
+* Original Link: https://nuthanc.github.io/keiko-corp/
 
 
 ### What can be done?
@@ -21,3 +21,13 @@
 ### Checking Performance
 * https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fnuthanc.github.io%2Fkeiko-corp%2F
 * https://www.webpagetest.org/result/210602_BiDcK2_1036cda04c6a5860485f13006a3dd4a7/
+
+### Author's solution
+
+* Move js scripts to body
+* Get minimized css and js libraries
+* Think of bundling css and js
+* Above the fold loading with css
+* Media queries
+* hero img optimization
+* Remove scrollTo and other libraries which aren't used
