@@ -68,3 +68,9 @@ export const searchRobots = (state=initialState, action={}) => {
 return { ...state, searchField: action.payload }
 ```
 * It's good to have state as objects
+
+### Redux Store and Provider
+
+* Connect redux to react with Provider and connect
+* We have Provider so that store doesn't need to be passed to multiple level Child Components by Prop drilling
+  * Provider will automatically provide the store to all the Components in the Component Tree
