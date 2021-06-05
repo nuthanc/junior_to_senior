@@ -42,3 +42,29 @@ npm i redux react-redux
 ```
 * Author's robofriends-redux link: https://github.com/aneagoie/robofriends-redux
 * With Hooks: https://github.com/rusty-jnr/robofriends
+* My implementation: https://github.com/nuthanc/webdev/tree/react_robofriends/robofriends_redux
+* Standard implementation of Redux from Stephen: https://github.com/nuthanc/react/tree/master/streams/client/src
+
+### Redux Actions And Reducers
+
+* Actions which return an object with type and payload(This object is the Action)
+* types.js or constants.js for types in Actions
+* Author used () right after the Arrow function instead of using return 
+* Used switch, Object.assign in reducers
+```js
+const initialState = {
+  searchField: ''
+}
+
+export const searchRobots = (state=initialState, action={}) => {
+  switch(action.type) {
+    case CHANGE_SEARCH_FIELD:
+      return Object.assign({}, state, {searchField: action.payload});
+    default:
+      return state;
+  }
+}
+// Stephen's using spread operator
+return { ...state, searchField: action.payload }
+```
+* It's good to have state as objects
