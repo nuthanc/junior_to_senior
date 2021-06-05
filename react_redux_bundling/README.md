@@ -33,3 +33,12 @@
   * Action -> Controller -> Model -> View
   * With change in Model, the View changes which in turn changes the Model which in turn changes the View
   * So there is a cycle of events between Model and View
+
+### Installing Redux
+
+* git clone of robofriends
+```sh
+npm i redux react-redux
+```
+* Author's robofriends-redux link: https://github.com/aneagoie/robofriends-redux
+* With Hooks: https://github.com/rusty-jnr/robofriends
