@@ -85,3 +85,9 @@ return { ...state, searchField: action.payload }
     * Stephen used Object shorthand form for this as it is easier to use
     * In Object shorthand form, only providing action creators is sufficient
     * For more info, checkout *Defining mapDispatchToProps As An Object*
+
+### Redux Middleware
+
+* Middleware is the tunnel between Actions and Reducers
+* It can listen in for Actions
+* Check here for more info about logger: https://github.com/nuthanc/webdev/tree/react_robofriends/robofriends_redux#authors-implementation
