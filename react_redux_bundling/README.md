@@ -18,7 +18,7 @@
 ### Why Use Redux
 
 * Good for managing large state
-* Useful for sharing data between containers
+* Useful for sharing data between containers(Smart components, i.e. Components having state)
 * Predictable state management using the 3 principles
   * Single source of truth
   * State is read only
@@ -74,3 +74,14 @@ return { ...state, searchField: action.payload }
 * Connect redux to react with Provider and connect
 * We have Provider so that store doesn't need to be passed to multiple level Child Components by Prop drilling
   * Provider will automatically provide the store to all the Components in the Component Tree
+
+### Redux connect
+
+* connect function is optimized so that we don't have to use store.subscribe()
+  * This is for listening to changes in store
+* connect is an higher order function
+  * First argument is for mapStateToProps
+  * Second argument is for mapDispatchToProps
+    * Stephen used Object shorthand form for this as it is easier to use
+    * In Object shorthand form, only providing action creators is sufficient
+    * For more info, checkout *Defining mapDispatchToProps As An Object*
