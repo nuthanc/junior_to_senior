@@ -112,8 +112,16 @@ return { ...state, searchField: action.payload }
 
 ### Module Bundlers
 
-* Bundles all the JS files together
+* Bundles all the JS, html and css files together
 * create-react-app uses Webpack to do this
 * Popular ones: Webpack, Parcel and rollup.js
 * Parcel comes with zero configuration, so it's blazing fast to use
 * Use rollup for your own npm packages
+
+### Introduction to Webpack
+
+* webpack.js.org
+* Entryfile: From where to start
+* Output: Where to output
+* Loaders: Like Babel
+* Plugin: 
