@@ -96,3 +96,16 @@ return { ...state, searchField: action.payload }
 
 * redux-thunk for Async requests
 * Redux thunk in Action, Slide 20: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fredux-code%2Fmaster%2Fdiagrams%2F11%2Fdiagrams.xml
+
+### Popular tools for React and Redux
+
+* React Router: Changing pages 
+* Ramda and Lodash: Utility libraries
+* Styling with React: Glamarous, Styled Components, css modules
+* Gatsby: Static websites in React
+* Next.js: SSR
+* Material UI and Semantic UI Components
+* Reselect: Help with performance with selectors
+* Redux Saga: Redux thunk super powered
+* Immutable JS: State remains immutable
+* But ask yourself, do I really need it
