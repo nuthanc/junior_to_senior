@@ -109,3 +109,11 @@ return { ...state, searchField: action.payload }
 * Redux Saga: Redux thunk super powered
 * Immutable JS: State remains immutable
 * But ask yourself, do I really need it
+
+### Module Bundlers
+
+* Bundles all the JS files together
+* create-react-app uses Webpack to do this
+* Popular ones: Webpack, Parcel and rollup.js
+* Parcel comes with zero configuration, so it's blazing fast to use
+* Use rollup for your own npm packages
