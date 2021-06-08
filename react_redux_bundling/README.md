@@ -91,3 +91,8 @@ return { ...state, searchField: action.payload }
 * Middleware is the tunnel between Actions and Reducers
 * It can listen in for Actions
 * Check here for more info about logger: https://github.com/nuthanc/webdev/tree/react_robofriends/robofriends_redux#authors-implementation
+
+### Redux Async Actions
+
+* redux-thunk for Async requests
+* Redux thunk in Action, Slide 20: https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FStephenGrider%2Fredux-code%2Fmaster%2Fdiagrams%2F11%2Fdiagrams.xml
