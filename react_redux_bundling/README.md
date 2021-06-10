@@ -124,4 +124,45 @@ return { ...state, searchField: action.payload }
 * Entryfile: From where to start
 * Output: Where to output
 * Loaders: Like Babel
-* Plugin: 
+* Plugin: Change the output of the code
+
+### Webpack 4
+
+* Checkout webpack-project folder
+```sh
+mkdir webpack-project
+cd webpack-project
+npm init -y
+mkdir dist
+cd dist && touch index.html
+
+npm i --save-dev webpack webpack-dev-server webpack-cli
+# Add npm start script in package.json
+# Create src/index.js and webpack.config.json
+npm start
+# localhost:8080
+```
+* We also need Babel which converts our code from ES7, ES6 or anything to ES5
+* **Babel**
+* babel property in package.json
+```sh
+npm i --save-dev babel-core babel-loader babel-preset-env babel-eslint
+# babel-loader compiles code
+# babel-preset-env checks browser and knows which feature is implemented in that Browser's particular version and converts it accordingly
+npm i babel-preset-stage-2 
+# The above is for experimental features
+npm i babel-preset-stage-react 
+``` 
+* Add module to use babel in webpack.config.js
+* resolve for leaving off js and jsx while importing
+```sh
+npm i react react-dom
+npm i --save-dev eslint eslint-loader eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-ally
+```
+* Create .eslintrc for eslint configurations
+* We could have done the same for babel(.babelrc) instead of having it in package.json
+* In .eslintrc, we can have no-console of warn to show a warning messages for console.log
+* Instead of adding one by one all the properties in .eslintrc, we can use already existing configs(eslint-config-airbnb)
+* For import and export statements, eslint-plugin-import
+* eslint-plugin-jsx-ally for Screen readers
+* npm run eject in React to get webpack.config file
