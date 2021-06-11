@@ -184,3 +184,15 @@ npm i --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
 }
 ```
 * Link to webpack, parcel Config generator: https://createapp.dev/
+
+### Parcel
+
+```sh
+mkdir parcel && cd parcel
+npm init -y
+npm i react react-dom
+npm i --save-dev parcel-bundler babel-preset-env babel-preset-react
+touch .babelrc
+```
+* After adding index.html and index.js
+* npm start
