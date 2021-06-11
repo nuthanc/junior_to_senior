@@ -166,3 +166,20 @@ npm i --save-dev eslint eslint-loader eslint-config-airbnb eslint-plugin-import 
 * For import and export statements, eslint-plugin-import
 * eslint-plugin-jsx-ally for Screen readers
 * npm run eject in React to get webpack.config file
+
+### Updating Libraries Babel 7 + ESlint
+
+* Some of the packages are deprecated
+```sh
+npm i --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
+```
+* .eslintrc.json or other supported extensions instead of plain dot file
+* Just a heads up on a quick correction from the previous video. To add a plugin to babel compiler you would need to have it under the plugin property in package.json file like this:
+```json
+{
+  "babel": {
+    "presets": [ ... ],
+    "plugins": [ ... ],
+  }
+}
+```
