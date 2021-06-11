@@ -183,3 +183,4 @@ npm i --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
   }
 }
 ```
+* Link to webpack, parcel Config generator: https://createapp.dev/
