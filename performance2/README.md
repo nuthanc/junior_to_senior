@@ -21,4 +21,9 @@
 * Production build: npm run build
   * Minimized and Optimized code
 
- 
+### Code Splitting Part 1
+
+* Use create-react-app to build an App
+* **Repo link**: https://github.com/nuthanc/code-splitting-exercise
+* App with 3 Pages as children but only one is displayed based on logic or route
+![cs1](../img/cs1.png)
