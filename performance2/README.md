@@ -97,3 +97,17 @@ if (this.state.route === 'page1') {
 * Code Splitting with React.lazy Repo: https://github.com/nuthanc/code-splitting-exercise-updated
   * Check Part 4 changes in the Repo
   * Wrap Lazy Components with Suspense Component which does something(fallback) while the Component loads(download and fetched)
+
+### React Performance Optimizations
+
+* localhost:3000/?react_perf
+  * Open Developer Tools -> Performance -> Record -> Search something in Robofriends App -> Stop
+  * Checkout the CPU graph
+  ![react_perf](../img/react_perf.png)
+  * You see that if the Nesting is deep, then the Re-render of the child components all down to the Leaf Children will happen
+  * By using Redux, we can be smart about what Components Update
+* React Developer tools Chrome Plugin
+  * Developer tools -> React tab
+  * Highlight Updates
+  * This shows what is being Rerendered when changes are made
+  * Using this, we can see what is being Rerendered unnecessarily
