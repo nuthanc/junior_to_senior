@@ -94,4 +94,6 @@ if (this.state.route === 'page1') {
   * Splitting based on Route like Home page, About page etc
 * There is also Component based Code Splitting
 * Also checkout React Loadable and also docs in React for Route-based Code Splitting
-* Updated Repo: https://github.com/nuthanc/code-splitting-exercise-updated
+* Code Splitting with React.lazy Repo: https://github.com/nuthanc/code-splitting-exercise-updated
+  * Check Part 4 changes in the Repo
+  * Wrap Lazy Components with Suspense Component which does something(fallback) while the Component loads(download and fetched)
