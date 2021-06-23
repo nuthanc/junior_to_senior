@@ -88,3 +88,10 @@ if (this.state.route === 'page1') {
   * Analyze the trade-offs
   * The Pages are asyncronously loaded when required
 
+### Code Splitting Part 4
+
+* Route based(Pages) Splitting
+  * Splitting based on Route like Home page, About page etc
+* There is also Component based Code Splitting
+* Also checkout React Loadable and also docs in React for Route-based Code Splitting
+* Updated Repo: https://github.com/nuthanc/code-splitting-exercise-updated
