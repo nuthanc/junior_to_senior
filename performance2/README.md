@@ -59,3 +59,32 @@ if (this.state.route === 'page1') {
 * Check this in Chrome Network tab, refresh and Clear all and click on Page2 or Page3
   * You see 1.chunk.js or *.chunk.js
 * Page2 and Page3 are not part of bundle.js downloaded initially
+
+### Code Splitting Part 3
+
+* Cleaner way instead of this.state.component is AsyncComponent
+* Check App.js and AsyncComponent of code-splitting-exercise repo
+* AsyncComponent is a higher order Component(i.e, a Component which returns other Component)
+```js
+// Below example for Assigning to new variable
+const o = {p: 42, q: true};
+const {p: foo, q: bar} = o;
+
+console.log(foo); // 42
+console.log(bar); // true
+
+if (this.state.route === 'page1') {
+  return <Page1 onRouteChange={this.onRouteChange} />
+} else if (this.state.route === 'page2') {
+  const AsyncPage2 = AsyncComponent(() => import("./Components/Page2"));
+  return <AsyncPage2 onRouteChange={this.onRouteChange} />
+} else {
+  const AsyncPage3 = AsyncComponent(() => import("./Components/Page3"));
+  return <AsyncPage3 onRouteChange={this.onRouteChange} />
+}
+```
+* Now AsyncComponent can be used for dynamic imports and rendering the Component based on the function passed as argument
+* npm run build has a bigger main.js because of import of AsyncComponent
+  * Analyze the trade-offs
+  * The Pages are asyncronously loaded when required
+
