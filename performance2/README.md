@@ -111,3 +111,76 @@ if (this.state.route === 'page1') {
   * Highlight Updates
   * This shows what is being Rerendered when changes are made
   * Using this, we can see what is being Rerendered unnecessarily
+
+### React Performance Optimizations 2
+
+* Andrei's Robofriends Repo: https://github.com/aneagoie/robofriends/blob/master/src/containers/App.js
+* We saw that Header <h1> was getting Rerendered unnecessarily
+* So he separated that to a separate Header component and used shouldComponentUpdate Lifecycle method
+  * When true is returned from shouldComponentUpdate, it will update the Component and vice-versa
+```js
+import React, { Component } from 'react';
+
+class Header extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+
+  render() {
+    console.log('Header');
+    return <h1 className='f1'>RoboFriends</h1>
+  }
+}
+
+export default Header;
+```
+* The above was not a good Example where the Component never updates when the state changes
+* Let's take another Example
+```js
+import React, { Component } from 'react';
+
+class CounterButton extends Component {
+  constructor() {
+    super();
+    this.state = {
+      count: 0;
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.count !== nextState.count) {
+      return true;
+    }
+    return false;
+  }
+
+  updateCount = () => {
+    this.setState({count: this.state.count + 1});
+  }
+
+  render() {
+    console.log('CounterButton');
+    return <button color={this.props.color} onClick={this.updateCount}>Count: {this.state.count}</button>
+  }
+}
+
+export default CounterButton;
+
+// <CounterButton color='red' />
+// The above is called from Header Component
+```
+* Sometimes sideeffect occurs when we use currentState to update
+  * State updates are not synchronous
+```js
+// Recommended way
+this.setState(state => {
+  return { count: state.count + 1}
+})
+```
+* By adding condition in shouldComponentUpdate, the CounterButton rerenders only when counter changes
+* This is a good thing because whenever Header(Parent) rerenders, CounterButton rerenders conditionally upon counter change
+* There is a nice class in React called **PureComponent** which when extended adds shouldComponentUpdate by default and returns true(condition for rerendering) only when the Props change
+  * One downside is it does shallow comparison and doesn't work as expected for Complex data structures(Deeply nested objects)
+* Awesome tool for this is **Why did you update** or **Why Did You Render**
+  * https://www.npmjs.com/package/why-did-you-update(Deprecated)
+  * https://www.npmjs.com/package/@welldone-software/why-did-you-render
