@@ -93,7 +93,7 @@ if (this.state.route === 'page1') {
 * Route based(Pages) Splitting
   * Splitting based on Route like Home page, About page etc
 * There is also Component based Code Splitting
-* Also checkout React Loadable and also docs in React for Route-based Code Splitting
+* Also checkout **React Loadable** and also **docs in React for Route-based Code Splitting**
 * Code Splitting with React.lazy Repo: https://github.com/nuthanc/code-splitting-exercise-updated
   * Check Part 4 changes in the Repo
   * Wrap Lazy Components with Suspense Component which does something(fallback) while the Component loads(download and fetched)
@@ -184,3 +184,13 @@ this.setState(state => {
 * Awesome tool for this is **Why did you update** or **Why Did You Render**
   * https://www.npmjs.com/package/why-did-you-update(Deprecated)
   * https://www.npmjs.com/package/@welldone-software/why-did-you-render
+
+### Optimizing Code Review
+
+![cop](../img/cop.png)
+* Tree shaking
+  * Big library, but using only one or two functions from that
+  * Then webpack will only import the required functions instead of the whole library 
+* Avoid memory leaks
+  * Clean up variables and Event listeners when they are not used
+* Tree shaking resource: https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/
