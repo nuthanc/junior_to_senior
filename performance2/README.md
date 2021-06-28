@@ -205,3 +205,12 @@ this.setState(state => {
   * HTTPS
   * App Manifest
   * Service Worker
+
+### PWA - HTTPS
+
+* HTTPS: Requests and Responses are Encrypted, so that it is Secure
+* Robofriends App passes this as Github pages automatically gives us a https link
+* **Let's Encrypt** is a free service for certification(Implementing HTTPS yourself)
+* **Cloudfare** for hosting sites
+* Github Pages: https://pages.github.com/
+* Progressive Web Apps Checklist: https://developers.google.com/web/progressive-web-apps/checklist
