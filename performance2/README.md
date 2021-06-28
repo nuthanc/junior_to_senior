@@ -219,8 +219,10 @@ this.setState(state => {
 
 * In index.html, meta tag for viewport is **necessary**
   * This is for optimizing the view in multiple devices
+  * https://web.dev/viewport/
 * Also, a manifest file is required
   * This is given out of the box from create-react-app in public/manifest.json
   * This manifest gives the Icon(because Icon image is referenced here) when the App is downloaded
 * We can use realfavicongenerator to generate icons(images) in various sizes(for different devices)
+  * https://realfavicongenerator.net/
 * Splash Screen is when the Web App is loading instead of white screen you provide background or image or whatever from the manifest.json
