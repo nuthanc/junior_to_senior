@@ -194,3 +194,14 @@ this.setState(state => {
 * Avoid memory leaks
   * Clean up variables and Event listeners when they are not used
 * Tree shaking resource: https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/
+
+### Progressive Web Apps
+
+* Web Apps that behave like Native Apps(Mobile) with Offline content, no URL, Install capabilities, Hardware access, Interactive, Responsive etc
+* PWA capability is already set in create-react-app
+* Install Chrome extension called **Lighthouse** to see what can be improved in our site for PWA
+* Author's Robofriends link: https://github.com/aneagoie/robofriends-redux
+* 3 main things
+  * HTTPS
+  * App Manifest
+  * Service Worker
