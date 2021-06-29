@@ -247,3 +247,23 @@ this.setState(state => {
   * If it isn't present, then it makes a Network Request
 * https://jakearchibald.github.io/isserviceworkerready/
 * Push notifications: https://auth0.com/blog/introduction-to-progressive-web-apps-push-notifications-part-3/
+
+### Deploying Our React App
+
+* Use https://github.com/aneagoie/robofriends-redux for this exercise
+```sh
+npm i gh-pages
+
+# Add deploy in package.json scripts
+"deploy": "gh-pages -d build"
+# pre syntax in npm so that it is done pre- something
+"predeploy": "npm run build"
+
+# Also homepage property for Github.io repo
+
+npm run deploy
+# Finally on Github, go to Github Pages and make sure it is in gh-pages-branch
+```
+* When the site is online, Generate Report using Lighthouse
+* You see around 82% for PWA
+* You can test this by turning wifi off and reload the Page
