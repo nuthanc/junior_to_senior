@@ -226,3 +226,24 @@ this.setState(state => {
 * We can use realfavicongenerator to generate icons(images) in various sizes(for different devices)
   * https://realfavicongenerator.net/
 * Splash Screen is when the Web App is loading instead of white screen you provide background or image or whatever from the manifest.json
+
+### PWA - Service Worker
+
+* Service Worker: Script that runs in the Browser's background apart from the main thread
+* This worker is used for non-interactive things
+* This makes our App work offline, background syncs and Push notifications
+* registerServiceWorker provided out of the box in create-react-app
+* **Service Worker diff in robofriends**: https://github.com/jeffposnick/create-react-pwa/compare/starting-point...pwa
+  * https://github.com/jeffposnick/create-react-pwa/compare/c-r-a-0.6.0...c-r-pwa-0.6.0
+  * sw-precache-config.js, we mention what all files to cache in staticFileGlobs, use build folder
+  * register is the one line which is actually required
+  * npm run build, there service-worker.js file is found
+* We can check if Service worker is present or not in our Applicaton in Chrome's Application tab and there Service Workers
+![sw](../img/sw.png)
+* Service worker acts as a **Network Proxy**
+  * Instead of our Application making requests to the Network, it first asks the Service worker
+  * The Service worker checks its Cache Storage to see if the requested Resource is present
+  * If present, it returns the Resource without making a request to the Network
+  * If it isn't present, then it makes a Network Request
+* https://jakearchibald.github.io/isserviceworkerready/
+* Push notifications: https://auth0.com/blog/introduction-to-progressive-web-apps-push-notifications-part-3/
