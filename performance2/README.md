@@ -267,3 +267,12 @@ npm run deploy
 * When the site is online, Generate Report using Lighthouse
 * You see around 82% for PWA
 * You can test this by turning wifi off and reload the Page
+
+### Service Worker Updates
+
+* Copy the latest serviceWorker from the latest create-react-app and paste it into the old serviceWorker file
+* Also change in index.js based on the new name and register the service worker
+* **Old repo:** https://github.com/aneagoie/Center-For-Robotos-Who-Cant-Be-In-The-App-Store-And-Wanna-Learn-To-Do-Other-Stuff-Good-Too/tree/master/src
+* **Updated repo:** https://github.com/aneagoie/Center-For-Robotos-Who-Cant-Be-In-The-App-Store-And-Wanna-Learn-To-Do-Other-Stuff-Good-Too-update/tree/master/src
+* Can also see this in Production build(npm run deploy)
+* Chrome -> Application tab
