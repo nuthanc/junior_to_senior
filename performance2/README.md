@@ -288,4 +288,17 @@ npm run deploy
 * But we can add size query in the API call
 * **npm run deploy**
 * It takes some time for the changes to propogate
+  * To check this, view the gh-pages branch in Github to see your changes
 * Generate Lighthouse Report again
+
+### Solution Part 2 - PWA
+
+* We can see the caches done by cra service worker in Application -> Cache Storage
+* Use https://realfavicongenerator.net/ for new logos for the App in various sizes
+* Download and move it to public folder
+* Add code in index.html's head tag
+  * Add %PUBLIC_URL%/ in front of the url paths as seen in other link tags
+* Add details of icons in manifest.json
+* npm run deploy
+* Generate Lighthouse Report
+* website that lists all tools that you can use to improve front end performance of your web app: https://progressivetooling.com/
