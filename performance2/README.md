@@ -276,3 +276,16 @@ npm run deploy
 * **Updated repo:** https://github.com/aneagoie/Center-For-Robotos-Who-Cant-Be-In-The-App-Store-And-Wanna-Learn-To-Do-Other-Stuff-Good-Too-update/tree/master/src
 * Can also see this in Production build(npm run deploy)
 * Chrome -> Application tab
+
+### Solution Part 1 - PWA
+
+* In lighthouse report, make even Accessibility and SEO score to 100 by following the advice given
+* Use font-display swap property for default text when sega font is still loading
+  * https://github.com/aneagoie/robofriends-pwa/blob/master/src/containers/App.css
+* Add **aria-label** in inputs for better accessibility for Screen Readers
+* For SEO, add meta description in public index.html
+* Images, we can't serve in Next-gen format because it is an API
+* But we can add size query in the API call
+* **npm run deploy**
+* It takes some time for the changes to propogate
+* Generate Lighthouse Report again
