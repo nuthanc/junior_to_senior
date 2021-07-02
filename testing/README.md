@@ -41,8 +41,14 @@
 
 ### Unit Tests
 
+* Individual small units
 * Based on an input, get an output
 * Unit tests are extremely useful for Pure functions
 * React functional components with no state are Pure functions
 * Pure functions: Functions with no side effects, i.e they are deterministic
 
+### Integration Tests
+
+* Cross communication between different units of code
+* Spies and Stubs are used to mock integration with other components
+* Brittle and harder to write
