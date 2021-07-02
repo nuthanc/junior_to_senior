@@ -38,3 +38,11 @@
 * Code coverage: Istanbul, Jest(Underneath uses Istanbul)
   * What percent of code are covered by tests
   * npm test -- --coverage
+
+### Unit Tests
+
+* Based on an input, get an output
+* Unit tests are extremely useful for Pure functions
+* React functional components with no state are Pure functions
+* Pure functions: Functions with no side effects, i.e they are deterministic
+
