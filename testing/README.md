@@ -62,3 +62,7 @@
 * End to End Test
 * Nightwatch, webdriveio, TestCafe, Nightmare, Cypress are some of the services that provide Automation Testing
 * UI tests take longer time
+
+### Final Note on Testing
+
+![Test](../img/test.png)
