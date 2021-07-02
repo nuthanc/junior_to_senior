@@ -52,3 +52,13 @@
 * Cross communication between different units of code
 * Spies and Stubs are used to mock integration with other components
 * Brittle and harder to write
+
+### Automation Tests
+
+* UI tests run on browser or browser-like env
+* Simulate User behavior
+* Ex: Checkout flow
+* Hardest to setup
+* End to End Test
+* Nightwatch, webdriveio, TestCafe, Nightmare, Cypress are some of the services that provide Automation Testing
+* UI tests take longer time
