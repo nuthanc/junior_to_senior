@@ -280,6 +280,7 @@ npm run deploy
 ### Solution Part 1 - PWA
 
 * In lighthouse report, make even Accessibility and SEO score to 100 by following the advice given
+* Accessibility resource: https://www.w3.org/standards/webdesign/accessibility
 * Use font-display swap property for default text when sega font is still loading
   * https://github.com/aneagoie/robofriends-pwa/blob/master/src/containers/App.css
 * Add **aria-label** in inputs for better accessibility for Screen Readers
