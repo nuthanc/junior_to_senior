@@ -8,12 +8,14 @@ const googleDatabase = [
   'myfavoritecats2.com'
 ];
 
-const googleSearch = (searchInput) => {
+const googleSearch = (searchInput, googleDatabase) => {
   const matches = googleDatabase.filter(website => {
     return website.includes(searchInput);
   })
   return matches.length > 3 ? matches.slice(0,3) : matches;
 }
 
-// console.log(googleSearch('soup'));
-console.log(googleSearch('cat'));
+// console.log(googleSearch('soup', googleDatabase));
+// console.log(googleSearch('cat', googleDatabase));
+
+module.exports = googleSearch;

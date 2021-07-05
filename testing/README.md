@@ -93,3 +93,9 @@ In /Users/nuthanc/personal_projects/junior_to_senior/testing/test
 Pattern:  - 0 matches
 ```
 * So add script.test.js
+
+### Our First Tests
+
+*  --watch *.js in jest command to watch changes for js files
+* We mock the db in the tests because it is an expensive operation to import or get hold of db
+* Also we want Pure function for googleSearch so that db can be passed as an argument
