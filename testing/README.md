@@ -66,3 +66,30 @@
 ### Final Note on Testing
 
 ![Test](../img/test.png)
+
+### Setting Up Jest
+
+* https://jestjs.io/docs/getting-started
+```sh
+mkdir test && cd test
+npm init -y
+touch script.js
+npm install --save-dev jest
+```
+* Update test script in package.json
+```sh
+npm test
+
+> test@1.0.0 test /Users/nuthanc/personal_projects/junior_to_senior/testing/test
+> jest
+
+No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+In /Users/nuthanc/personal_projects/junior_to_senior/testing/test
+  3 files checked.
+  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 0 matches
+  testPathIgnorePatterns: /node_modules/ - 3 matches
+  testRegex:  - 0 matches
+Pattern:  - 0 matches
+```
+* So add script.test.js
