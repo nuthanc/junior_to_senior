@@ -99,3 +99,10 @@ Pattern:  - 0 matches
 *  --watch *.js in jest command to watch changes for js files
 * We mock the db in the tests because it is an expensive operation to import or get hold of db
 * Also we want Pure function for googleSearch so that db can be passed as an argument
+
+### Writing Tests
+
+* It's better to have more tests because it is never going into Production and you can cover a lot of scenarios
+* Don't worry of repeating in Tests
+* Make tests fail first before you make them pass
+* Group tests with **describe**
