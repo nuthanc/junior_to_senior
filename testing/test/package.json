@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch *.js"
+    "test": "jest --watch *.js --detectOpenHandles"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
   }
 }

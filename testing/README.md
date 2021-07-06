@@ -106,3 +106,13 @@ Pattern:  - 0 matches
 * Don't worry of repeating in Tests
 * Make tests fail first before you make them pass
 * Group tests with **describe**
+
+### Asynchronous Tests
+
+* Stars Wars API: https://swapi.dev/
+* Jest cheat sheet: https://github.com/sapegin/jest-cheat-sheet
+* Fetch is not available on node, we need to install it via npm i node-fetch
+* Checkout script2.js and script2.test.js
+* expect.assertions call to expect the number of assertions in the test
+* Need **done** argument, which needs to be called after the async request, otherwise test passes and exits without even asserting
+* Other than **done**, we can also use **return** to wait for the promise to return
