@@ -116,3 +116,7 @@ Pattern:  - 0 matches
 * expect.assertions call to expect the number of assertions in the test
 * Need **done** argument, which needs to be called after the async request, otherwise test passes and exits without even asserting
 * Other than **done**, we can also use **return** to wait for the promise to return
+
+### Mocks and Spies
+
+* Mock the fetch function
