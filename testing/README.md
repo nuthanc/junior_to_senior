@@ -120,3 +120,7 @@ Pattern:  - 0 matches
 ### Mocks and Spies
 
 * Mock the fetch function
+
+### Testing Exercise Repo
+
+* https://github.com/aneagoie/udemy-testing-exercise
