@@ -121,6 +121,7 @@ Pattern:  - 0 matches
 
 * Mock the fetch function
 
-### Testing Exercise Repo
+### Testing Exercise Repos
 
 * https://github.com/aneagoie/udemy-testing-exercise
+* https://github.com/aneagoie/robofriends-pwa
