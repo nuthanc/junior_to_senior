@@ -152,3 +152,11 @@ expect(shallow(<Card />).length).toEqual(1);
   * In between shallow and mount
   * It doesn't require a DOM API like mount
   * It renders Child components too
+
+### Snapshot Testing
+
+* Snapshot Testing involves taking a Snapshot of the Component and later checking whether it matches the Snapshot
+* When we use **toMatchSnapshot()**, it creates a folder called __snapshots__ with the name of the test file
+* When changes are made to the Component, the test fails showing the diff
+* If there are intentional changes, press w and press u to update failing snapshots(Take another snapshot)
+* To check code coverage, **npm test -- --coverage**
