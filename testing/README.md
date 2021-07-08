@@ -156,7 +156,12 @@ expect(shallow(<Card />).length).toEqual(1);
 ### Snapshot Testing
 
 * Snapshot Testing involves taking a Snapshot of the Component and later checking whether it matches the Snapshot
+* https://github.com/aneagoie/robofriends-testing/blob/master/src/components/Card.test.js
 * When we use **toMatchSnapshot()**, it creates a folder called __snapshots__ with the name of the test file
 * When changes are made to the Component, the test fails showing the diff
 * If there are intentional changes, press w and press u to update failing snapshots(Take another snapshot)
 * To check code coverage, **npm test -- --coverage**
+
+### Snapshot Testing + Code Coverage
+
+* https://github.com/aneagoie/robofriends-testing/blob/master/src/components/CardList.test.js
