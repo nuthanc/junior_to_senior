@@ -125,3 +125,30 @@ Pattern:  - 0 matches
 
 * https://github.com/aneagoie/udemy-testing-exercise
 * https://github.com/aneagoie/robofriends-pwa
+
+### Introduction to Enzyme
+
+* https://enzymejs.github.io/enzyme/docs/api/
+* https://github.com/aneagoie/robofriends-testing
+* Enzyme for Component Testing to see whether the div get rendered, h2 get rendered etc
+```sh
+npm i --save-dev enzyme enzyme-adapter-react-16
+```
+* setupTests.js required as part of Setup: https://github.com/aneagoie/robofriends-testing/blob/master/src/setupTests.js
+* shallow(Using this 90% of the time), mount and render functions from enzyme
+* In Card.test.js, console.log(shallow(<Card />)) and check
+  * You see **ShallowWrapper { length: 1 } as output
+  * shallow does Shallow rendering, i.e. it renders only Card component only even thought if it has other Child components
+  * This allows to test one Component at a time
+* react-scripts already has jest, so we can run npm test
+```js
+expect(shallow(<Card />).length).toEqual(1);
+```
+* mount does a full DOM rendering
+  * Life cycle method
+  * DOM API like querySelectorAll
+  * Headless browser or JSDOM is recommended
+* render is used for rendering React Components, but unlike to a real DOM, it's rendered to a static HTML
+  * In between shallow and mount
+  * It doesn't require a DOM API like mount
+  * It renders Child components too
