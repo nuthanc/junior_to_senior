@@ -165,3 +165,14 @@ expect(shallow(<Card />).length).toEqual(1);
 ### Snapshot Testing + Code Coverage
 
 * https://github.com/aneagoie/robofriends-testing/blob/master/src/components/CardList.test.js
+
+### Testing Stateful Components
+
+* How to test whether the **count state of Counter component** is incrementing or not?
+* https://github.com/aneagoie/robofriends-testing/blob/master/src/components/CounterButton.test.js
+* Even for Stateful Components, we can still do toMatchSnapshot() tests
+* We can find elements within a Component using *find* method and can also simulate actions such as clicking of button, keypress etc
+* We can also check for props
+```js
+expect(wrapper.props().color).toEqual('red')
+```
