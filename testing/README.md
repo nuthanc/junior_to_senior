@@ -176,3 +176,38 @@ expect(shallow(<Card />).length).toEqual(1);
 ```js
 expect(wrapper.props().color).toEqual('red')
 ```
+
+### Testing Connected Components
+
+* How to test connected components(redux) like App.js(https://github.com/aneagoie/robofriends-testing/blob/master/src/containers/App.js)
+```js
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from './App';
+
+it('expect to render App Component', () => {
+  // Part 2
+  const mockStore = {
+    robots: [],
+    searchField: ''
+  }
+  expect(shallow(<App store={mockStore}/>)).toMatchSnapshot();
+  // Even after mocking store, we get an error state.getState is not a function
+  // End of Part 2
+
+  // Part 1
+  expect(shallow(<App />)).toMatchSnapshot();
+  // Could not find "store" in either context or props of Connect(App)...
+});
+```
+* We can use redux-store-mock library, but let's simplify our Component
+* You can check how the App structure looks by opening React section in Developer tools for Robofriends site
+![structure](../img/structure.png)
+* Moved the rendering jsx to MainPage.js(https://github1s.com/aneagoie/robofriends-testing/blob/HEAD/src/components/MainPage.js) so that App can mainly concentrate on Connecting to redux store
+* Now, we don't even have to test App.js because it has only redux store stuff(state and dispatch), and it is already tested in redux(Testing Functionality of Redux)
+* So testing only MainPage.js is sufficient
+* Make your tests easy
+  * If it's not easy to write tests, then the Component is complicated, so try to make it simplified just as we split it here in case of App and MainPage.js
+* https://github1s.com/aneagoie/robofriends-testing/blob/HEAD/src/components/MainPage.test.js
+* Moved filterRobots from render to a separate function to test this easily
+* **instance()** method gives access to all the Instance methods of the class
