@@ -211,3 +211,8 @@ it('expect to render App Component', () => {
 * https://github1s.com/aneagoie/robofriends-testing/blob/HEAD/src/components/MainPage.test.js
 * Moved filterRobots from render to a separate function to test this easily
 * **instance()** method gives access to all the Instance methods of the class
+
+### Testing Reducers
+
+* https://github1s.com/aneagoie/robofriends-testing/blob/HEAD/src/reducers.test.js
+* Easier to test as they are Pure functions
