@@ -216,3 +216,24 @@ it('expect to render App Component', () => {
 
 * https://github1s.com/aneagoie/robofriends-testing/blob/HEAD/src/reducers.test.js
 * Easier to test as they are Pure functions
+
+### Testing Actions
+
+*  constants file doesn't require tests, so don't waste time here
+*  As a developer, you need to know what you need to test and what not to
+   *  Code coverage of 100% for all files is not required
+* https://github1s.com/aneagoie/robofriends-testing/blob/HEAD/src/actions.test.js
+* For asynchronous Action creators, we require **npm i --save-dev redux-mock-store**
+```js
+import configureMockStore from 'redux-mock-store'
+import thunkMiddleware from 'redux-thunk'
+
+export const mockStore = configureMockStore([thunkMiddleware]);
+
+// Create store
+const store = mockStore();
+```
+* Best to have configureMockStore in setupTests and export it for other tests to use
+* Great libraries for Async tests are **nock** and **supertest** npm packages
+* Also Google for Async tests in React and Redux
+* https://blog.usejournal.com/lean-testing-or-why-unit-tests-are-worse-than-you-think-b6500139a009
