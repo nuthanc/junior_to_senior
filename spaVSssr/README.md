@@ -21,3 +21,16 @@
 ![ssr](../img/ssr.png)
 
 * SSR: Renders a lot faster on the initial request because the server responds with a **fully rendered Page**
+
+### Server Side Rendering React
+
+![ssr_server](../img/ssr_server.png)
+* HTML to React syntax using React.createElement
+* response.render: Render index with content
+
+* In SSR, the HTML is fully rendered, so the Browser saves time on Mounting
+* You need to send string or json over the wire from server to client
+* In general, with any library, on the Server the client App needs to be rendered to String and finally on the client side, you need to attach only event listeners as the html is already parsed
+* With React library,
+  * On Server -> ReactDOM.renderToString() or ReactDOM.renderToNodeStream()
+  * On Client -> ReactDOM.hydrate()
