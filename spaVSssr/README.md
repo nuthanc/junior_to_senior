@@ -58,3 +58,7 @@
     * Slower Page rendering
       * Server needs to render the App on the server using synchronous CPU dom call(renderToString) which holds off the event loop, so any other request cannot be processed
     * Requests to server
+
+### SSR React Libraries
+
+* Gatsby and Next
