@@ -34,3 +34,27 @@
 * With React library,
   * On Server -> ReactDOM.renderToString() or ReactDOM.renderToNodeStream()
   * On Client -> ReactDOM.hydrate()
+
+### CSR vs SSR Part 2
+
+* CSR
+  * Pros
+    * Rich Interactions
+    * Faster Response
+    * Web Applications
+  * Cons
+    * Low SEO potential
+      * Crawlers such as Google bot only see the div of App and thinks there is not much content
+      * Doesn't see the AJAX request made
+      * Crawlers wait only 10-15 seconds to take the snapshot of the Webpage
+    * Longer initial load
+* SST
+  * Pros
+    * Static Sites(Like React docs where the content is static(text based info) and the html changes at the top as new links are clicked)
+    * SEO
+    * Initial Page Load
+  * Cons
+    * Full Page Reloads
+    * Slower Page rendering
+      * Server needs to render the App on the server using synchronous CPU dom call(renderToString) which holds off the event loop, so any other request cannot be processed
+    * Requests to server
