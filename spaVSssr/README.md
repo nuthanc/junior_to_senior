@@ -97,3 +97,8 @@ mkdir pages
 * npm i isomorphic-unfetch
   * fetch in next.js
 * https://github1s.com/aneagoie/next-ssr-update/blob/HEAD/pages/robots.js
+
+### Deploying Next.js Apps
+
+* Going to Production: https://nextjs.org/docs/going-to-production
+* Deployment: https://nextjs.org/docs/deployment
