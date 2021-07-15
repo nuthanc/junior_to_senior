@@ -78,3 +78,9 @@ mkdir pages
 ### Next.js Pages
 
 * Link to add client side routing behavior in Next.js
+
+### Client Side Routing
+
+* Routing doesn't require request to Server
+* JS on the client side takes care of it
+* In next.js, using Link adds the behavior of client side rendering, i.e refreshing only parts of the Page without reloading the entire Page
