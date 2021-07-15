@@ -91,3 +91,9 @@ mkdir pages
 * components folder in root dir of next App
 * It can also be in pages, but it is usually in root of the App folder
 * Add Component class in components folder and import that in about.js of pages dir
+
+### Dynamic Apps with Next.js
+
+* npm i isomorphic-unfetch
+  * fetch in next.js
+* https://github1s.com/aneagoie/next-ssr-update/blob/HEAD/pages/robots.js
