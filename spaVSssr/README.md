@@ -102,3 +102,12 @@ mkdir pages
 
 * Going to Production: https://nextjs.org/docs/going-to-production
 * Deployment: https://nextjs.org/docs/deployment
+
+### Updating To Latest Version of Next.js
+
+* Clone repo using git clone
+* npm install
+* npm audit fix --force
+* npm update
+* npm i next@latest
+* npm start
