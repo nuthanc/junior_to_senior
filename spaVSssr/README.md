@@ -111,3 +111,7 @@ mkdir pages
 * npm update
 * npm i next@latest
 * npm start
+
+### Understand the JavaScript SEO basics
+
+* https://developers.google.com/search/docs/advanced/javascript/javascript-seo-basics
