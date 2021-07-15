@@ -74,3 +74,7 @@ mkdir pages
 * start script to **next** in package.json 
 * Add index.js for some content
 * **View Page Source** shows the whole content versus only div id of root in React robofriends App
+
+### Next.js Pages
+
+* Link to add client side routing behavior in Next.js
