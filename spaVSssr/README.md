@@ -84,3 +84,4 @@ mkdir pages
 * Routing doesn't require request to Server
 * JS on the client side takes care of it
 * In next.js, using Link adds the behavior of client side rendering, i.e refreshing only parts of the Page without reloading the entire Page
+* Client vs Server side Routing: https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f
