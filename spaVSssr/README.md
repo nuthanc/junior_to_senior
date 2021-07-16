@@ -115,3 +115,26 @@ mkdir pages
 ### Understand the JavaScript SEO basics
 
 * https://developers.google.com/search/docs/advanced/javascript/javascript-seo-basics
+
+### Section Summary
+
+* SSR is great for static sites
+* Pros
+  * Initial page loads are faster
+  * SEOs are better
+* Cons
+  * Does Full page reloads and rerendering is slow
+  * Multiple requests to the server
+* CSR is great for Rich interactions
+* Pros
+  * Fast website rendering after the Initial load
+  * Good tool for Web Applications
+* Cons
+  * SEO was really hard to get it right
+  * Longer initial load
+![reg](../img/reg.png)
+![ssr2](../img/ssr2.png)
+![prog_rend](../img/prog_rend.png)
+* Progressive rendering via Code splitting, Above the fold loading and sending only what is required
+  * Client side rendering with the above techniques like Code splitting and above the fold loading, load only what's needed and after that download the rest in the background
+* https://prerender.io/
