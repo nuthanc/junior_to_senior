@@ -7,6 +7,7 @@
 * Most common Attack
 * Injecting code to another piece of code
 * Most famous: SQL Injection
+* https://www.hacksplaining.com/exercises/sql-injection
 ```txt
 ' or 1=1--
 The above in Password field so that it will return True
