@@ -75,3 +75,12 @@ app.use(morgan('combined')); // or 'tiny'
 * https://github1s.com/aneagoie/security-server-exercise/blob/HEAD/server.js#L18-L19
 * https://www.npmjs.com/package/winston
 * Never log out system errors to Front-end
+
+### HTTPS Everywhere
+
+* SSL/TLS Certificates
+* Encrypts the info between client and server
+* To get HTTPS
+  * Let's Encrypt(https://letsencrypt.org/): Free
+  * Github Pages
+  * Cloudfare
