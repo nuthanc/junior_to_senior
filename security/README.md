@@ -58,3 +58,20 @@ nsp check # audit package.json
 npm install -g snyk
 synk test # audit node_modules directory
 ```
+
+### Logging
+
+* With good Logging, we would be able to find issues quickly
+```sh
+npm i winston
+npm i morgan
+```
+```js
+const morgan = require('morgan')
+
+app.use(morgan('combined')); // or 'tiny'
+```
+* http://expressjs.com/en/resources/middleware/morgan.html
+* https://github1s.com/aneagoie/security-server-exercise/blob/HEAD/server.js#L18-L19
+* https://www.npmjs.com/package/winston
+* Never log out system errors to Front-end
