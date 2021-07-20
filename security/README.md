@@ -45,3 +45,16 @@ INSERT INTO sqlinjection (email) VALUES (''; DROP TABLE sqlinjection; --);
 1. Sanitize input: For data validation, only allow user to enter data of expected type(like text, email etc)
 2. Parametrize Queries: Give only parameters 
 3. Knex.js or other ORMS
+
+### 3rd Party Libraries
+
+* Library you can trust
+* Go to Github and check their stars and forks
+```sh
+npm install -g nsp
+# use sudo if you lack permission
+nsp check # audit package.json
+
+npm install -g snyk
+synk test # audit node_modules directory
+```
