@@ -132,3 +132,14 @@ app.get('/', (req, res) => {
 * No document.write()
 * Content Security Policy
 * Secure + HTTPOnly Cookies
+
+### Code Secrets
+
+1. Environment Variables: API key
+   * process.env set by create-react-app
+   * Under the hood, it uses dotenv package
+   * .env file in create-react-app(REACT_APP_SAY_HI=HIII)
+   * Run npm start again and you can see the details in process.env
+2. Commit History
+  * Include .env in .gitignore
+  * Don't commit your code secrets to Github
