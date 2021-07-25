@@ -170,3 +170,8 @@ app.get('/', (req, res) => {
   * bcrypt, scrypt, aragon2
   * pgcrypto - encrypt a few columns(Encrypting database)
 * https://rangle.io/blog/how-to-store-user-passwords-and-overcome-security-threats-in-2017/
+
+### Don't Trust Anyone
+
+![dta](../img/dta.png)
+* ratelimiter when client is compromised and sends requests after requests
