@@ -1,7 +1,9 @@
 ### Star of Security
 
 ![star](../img/star.png)
-
+* https://www.hacksplaining.com/lessons
+* https://watchyourhack.com/
+* 
 ### Injections
 
 * Most common Attack
@@ -175,3 +177,10 @@ app.get('/', (req, res) => {
 
 ![dta](../img/dta.png)
 * ratelimiter when client is compromised and sends requests after requests
+
+### Authentication
+
+![auth](../img/auth.png)
+* 2 factor authentication
+* https://www.hacksplaining.com/lessons
+* https://watchyourhack.com/
