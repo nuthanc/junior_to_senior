@@ -163,3 +163,10 @@ app.get('/', (req, res) => {
 * CORS: Cross origin resource sharing
   * Access to only people we trust using corsOptions
 ![cors](../img/cors.png)
+
+### Data Management
+
+* Encrypt only sensitive data
+  * bcrypt, scrypt, aragon2
+  * pgcrypto - encrypt a few columns(Encrypting database)
+* https://rangle.io/blog/how-to-store-user-passwords-and-overcome-security-threats-in-2017/
