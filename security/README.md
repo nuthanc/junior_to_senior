@@ -143,3 +143,15 @@ app.get('/', (req, res) => {
 2. Commit History
   * Include .env in .gitignore
   * Don't commit your code secrets to Github
+
+### Secure Headers
+
+* npm install helmet
+* Without helmet, make some request in input field
+* In Network tab of that request, in the Headers section, you see
+  * Info of X-Powered-By: Express
+* https://github1s.com/aneagoie/security-server-exercise/blob/HEAD/server.js#L9-L10
+* HTTP Headers: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+* HTTP Header fields: https://www.tutorialspoint.com/http/http_header_fields.htm
+* helmet: https://github.com/helmetjs/helmet
+* HTTP: The Protocol Every Web Developer Must Know: https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
