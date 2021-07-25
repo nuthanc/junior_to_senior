@@ -18,3 +18,11 @@
 brew services start postgresql
 createdb 'smart-brain1'
 ```
+
+### How To Analyze Code
+
+* API first to look at the endpoints
+  * Endpoints tell a lot about the App
+* Look at the Folder structure and the README
+* Next at index.js or the server.js
+* Next in the Frontend, start off with index.js
