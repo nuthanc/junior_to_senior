@@ -155,3 +155,11 @@ app.get('/', (req, res) => {
 * HTTP Header fields: https://www.tutorialspoint.com/http/http_header_fields.htm
 * helmet: https://github.com/helmetjs/helmet
 * HTTP: The Protocol Every Web Developer Must Know: https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
+
+### Access Control
+
+* Principal of least privilege
+  * Give nearly enough so that People can do their work and nothing more
+* CORS: Cross origin resource sharing
+  * Access to only people we trust using corsOptions
+![cors](../img/cors.png)
