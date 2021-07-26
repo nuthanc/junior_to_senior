@@ -26,3 +26,9 @@ createdb 'smart-brain1'
 * Look at the Folder structure and the README
 * Next at index.js or the server.js
 * Next in the Frontend, start off with index.js
+
+### New Feature Commit
+
+* https://github.com/aneagoie/smart-brain-boost/commit/09961431e44692473533cfdd8526aaa8bce5a0be
+* https://github1s.com/aneagoie/smart-brain-boost/blob/HEAD/src/App.js
+
