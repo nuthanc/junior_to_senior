@@ -27,7 +27,7 @@ createdb 'smart-brain1'
 * Next at index.js or the server.js
 * Next in the Frontend, start off with index.js
 
-### New Feature Commit
+### New Feature Commit: Multiple Face Detection Solution
 
 * https://github.com/aneagoie/smart-brain-boost/commit/09961431e44692473533cfdd8526aaa8bce5a0be
 * https://github1s.com/aneagoie/smart-brain-boost/blob/HEAD/src/App.js
