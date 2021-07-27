@@ -30,3 +30,13 @@
   * user2.txt
   * user3.txt
 ![rel-vs-nonRel](../img/relVsnon-rel.png)
+
+### Installing Redis
+
+```sh
+make 
+src/redis-server
+src/redis-cli
+```
+* If Redis installation fails: https://stackoverflow.com/questions/37103054/redis-installation-fails-with-newer-version-of-jemalloc-required-when-running
+* https://stackoverflow.com/questions/8131008/issue-with-redis-install-cc-command-not-found
