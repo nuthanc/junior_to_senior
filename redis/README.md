@@ -40,3 +40,17 @@ src/redis-cli
 ```
 * If Redis installation fails: https://stackoverflow.com/questions/37103054/redis-installation-fails-with-newer-version-of-jemalloc-required-when-running
 * https://stackoverflow.com/questions/8131008/issue-with-redis-install-cc-command-not-found
+
+### Redis Commands
+
+```txt
+SET name "Godzilla"
+GET name
+EXISTS name
+DEL name
+SET session "Jenny"
+# Expire after 10 seconds
+EXPIRE session 10 
+GET session
+```
+* Full list of commands: https://redis.io/commands
