@@ -12,3 +12,21 @@
   * MongoDB and CouchDB: Document(Like LinkedIn profile containing a variety of fields)
   * Cassandra: Wide Column
   * neo4j: Graph(Social media)
+
+### Introduction to Databases
+
+* Database: Collection of data
+* DBMS: Tools that give access to data and work with data
+![rel](../img/rel.png)
+* Relational databases use SQL
+  * users.txt
+  * tweets.txt
+  * profile.txt
+  * following.txt
+![non-rel](../img/non-rel.png)
+* Non-Relational doesn't require schema first(Unstructured data)
+* MongoDB as an example
+  * user1.txt
+  * user2.txt
+  * user3.txt
+![rel-vs-nonRel](../img/relVsnon-rel.png)
