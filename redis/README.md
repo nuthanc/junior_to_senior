@@ -91,3 +91,28 @@ LRANGE ourlist 0 1
 
 ```
 * Implemented with Linked lists
+
+### Redis Sets + Sorted Sets
+
+```sh
+SADD ourset 1 2 3 4 5
+# 1 2 3 4 5
+SMEMBERS ourset
+SADD ourset 1 2 3 4
+SMEMBERS ourset 
+# 1 2 3 4 5
+SISMEMBER ourset 5
+# (integer) 1
+SISMEMBER ourset 25
+# (integer) 0
+
+# Sorted set
+ZADD team 50 "Wizards"
+ZADD team 40 "Cava"
+ZRANGE team 0 1
+# Cava Wizards
+ZADD team 1 "Bolts"
+ZRANGE team 0 2
+# Bolts Cava Wizards
+ZRANK team "Wizards"
+```
