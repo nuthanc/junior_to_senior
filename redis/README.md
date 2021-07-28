@@ -54,3 +54,13 @@ EXPIRE session 10
 GET session
 ```
 * Full list of commands: https://redis.io/commands
+
+### Redis Data Types
+
+```sh
+MSET a 2 b 5
+GET a
+GET b
+MGET a b
+# All these return Strings
+```
