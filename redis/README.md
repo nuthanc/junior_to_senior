@@ -73,3 +73,21 @@ HGET user id
 HGET user name
 HGETALL user
 ```
+* Like objects
+
+### Redis Lists
+
+```sh
+# Left Push
+LPUSH ourlist 10
+# Right Push
+RPUSH ourlist "hello"
+LRANGE ourlist 0 1
+# "10" and "hello"
+LPUSH ourlist 55
+RPOP ourlist
+LRANGE ourlist 0 1
+# "55" and "10"
+
+```
+* Implemented with Linked lists
