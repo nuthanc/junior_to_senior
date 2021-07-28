@@ -64,3 +64,12 @@ GET b
 MGET a b
 # All these return Strings
 ```
+
+### Redis Hashes
+
+```sh
+HMSET user id 46 name "Johnny"
+HGET user id
+HGET user name
+HGETALL user
+```
