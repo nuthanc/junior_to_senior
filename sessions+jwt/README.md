@@ -29,3 +29,8 @@
 * The Server validates the Username and Password and generates the JWT and also stores it in Redis
 * Any further requests from the Client includes the JWT
 * The Server will check for the Token within the Redis DB and then responds if it has the token in Redis
+
+### JWT
+
+* Don't share sensitive info in JWT as it can be decoded
+* https://jwt.io/
