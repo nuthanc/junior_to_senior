@@ -2,6 +2,10 @@
 
 * JWT: Json Web Tokens
 * Users authenticate and receive token from the server to access whatever they have rights to and make changes
+* Commits: https://github.com/aneagoie/smart-brain-boost/commits/master
+* Front end: https://github1s.com/aneagoie/smart-brain-boost/blob/master/package.json
+* Back end: https://github1s.com/aneagoie/smart-brain-boost-api
+* Back end dockerized: https://github1s.com/aneagoie/smart-brain-boost-api-dockerized
 
 ### Cookies vs Tokens
 
@@ -34,3 +38,30 @@
 
 * Don't share sensitive info in JWT as it can be decoded
 * https://jwt.io/
+
+### Profile Icon
+
+* reactstrap(For Components) and bootstrap(For Styling) library
+* Adding Profile Modal commit: https://github.com/aneagoie/smart-brain-boost/commit/6b07d65b7a173d33d028eeb42a98ae256bbe74d5
+* https://github1s.com/aneagoie/smart-brain-boost/blob/master/package.json
+* Import bootstrap css in index.js and place it before tachyons and index.css so that tachyons and index.css override Bootstrap classes
+
+### Profile Dropdown
+
+* https://github1s.com/aneagoie/smart-brain-boost/blob/master/src/components/Profile/ProfileIcon.js
+* https://reactstrap.github.io/components/dropdowns/
+* Callback function in setState to have proper predictability of setState
+```js
+toggle = () => {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }));
+  }
+```
+* Custom Dropdown in Reactstrap
+* https://stackoverflow.com/questions/42038590/when-to-use-react-setstate-callback
+* https://betterprogramming.pub/when-to-use-callback-function-of-setstate-in-react-37fff67e5a6c
+
+### Profile Styling
+
+* 
