@@ -64,4 +64,4 @@ toggle = () => {
 
 ### Profile Styling
 
-* 
+* Sometimes even if styles are after Bootstrap, it gets overwritten due to Bootstrap's important flag 
