@@ -65,3 +65,19 @@ toggle = () => {
 ### Profile Styling
 
 * Sometimes even if styles are after Bootstrap, it gets overwritten due to Bootstrap's important flag 
+
+### Profile Modal
+
+* React Portals
+* ReactDOM render outside of the App Component
+* https://github1s.com/aneagoie/smart-brain-boost/blob/master/public/index.html#L29-L30
+* https://github1s.com/aneagoie/smart-brain-boost/blob/master/src/components/Modal/Modal.js
+* Modal.css
+* Profile.js
+* &times;(html entity)
+* https://www.w3schools.com/charsets/ref_html_entities_4.asp
+
+### Good practise in Forms
+
+* Have a state that the form keeps and soon as the User clicks submit, then we update the state
+* Else there will be unnecessary re-renders when the inputs changes(if we have onChange event on input)
