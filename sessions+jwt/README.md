@@ -81,3 +81,11 @@ toggle = () => {
 
 * Have a state that the form keeps and soon as the User clicks submit, then we update the state
 * Else there will be unnecessary re-renders when the inputs changes(if we have onChange event on input)
+
+### User Authentication
+
+* Client sends Username and Password to Server
+* The Server then sends JWT to client
+* Client uses JWT to post or get resource
+* https://github1s.com/aneagoie/smart-brain-boost-api-dockerized/blob/HEAD/controllers/signin.js
+* server.js signinAuthentication method
