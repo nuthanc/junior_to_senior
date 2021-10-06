@@ -89,3 +89,8 @@ toggle = () => {
 * Client uses JWT to post or get resource
 * https://github1s.com/aneagoie/smart-brain-boost-api-dockerized/blob/HEAD/controllers/signin.js
 * server.js signinAuthentication method
+
+### Sending the JWT Token
+
+* https://github1s.com/aneagoie/smart-brain-boost-api-dockerized/blob/HEAD/controllers/signin.js
+ 
