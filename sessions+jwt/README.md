@@ -93,4 +93,16 @@ toggle = () => {
 ### Sending the JWT Token
 
 * https://github1s.com/aneagoie/smart-brain-boost-api-dockerized/blob/HEAD/controllers/signin.js
- 
+
+### Adding Redis
+
+* Storing token in Redis db gives us lot of control like deleting the token when the User signs out
+
+### Adding Redis To Docker Compose
+
+* Adding things in docker-compose
+* https://github1s.com/aneagoie/smart-brain-boost-api-dockerized/blob/HEAD/docker-compose.yml#L17-L22
+```sh
+docker-compose up --build
+docker-compose exec redis redis-cli
+```
