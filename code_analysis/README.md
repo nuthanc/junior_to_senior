@@ -8,7 +8,7 @@
 * npm install
 * npm start to check if it works
 * Try creating account
-* If errors, open the Console
+* If errors, open the Console in Web as well as Terminal
 * Check if the error is on the Client side or the Server side
 * Based on that, open relevant files
 * In our case, it's a problem at the Backend
@@ -26,6 +26,7 @@ createdb 'smart-brain1'
 * Look at the Folder structure and the README
 * Next at index.js or the server.js
 * Next in the Frontend, start off with index.js
+* Start with the Big picture and get a general overview of everything
 
 ### New Feature Commit: Multiple Face Detection Solution
 
